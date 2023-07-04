@@ -19,15 +19,19 @@
                 </button>
             </form>
         </div>
-        <ul>
-            
+
+        <ul  v-if="todoList.lenght > 0">
             <li v-for="(sigleTodo, i) in todoList">
                 {{sigleTodo.text}}
+
                 <span @click="removeToDo(i)"> 
                     X
                 </span>
             </li>
         </ul>
+        <div v-else>
+            non ci sono ToDO
+        </div>
     </div>
 
 
