@@ -12,15 +12,20 @@
 
     <div id="app">
         <div>
-            <input type="text" v-model="newTodo" placeholder="inserisci un elemento della lista ">
-            <button @click="addTodo()">
-                Aggiungi 
-            </button>
+            <form action="" @submit.prevent="addTodo()">
+                <input required type="text" v-model="newTodo" placeholder="inserisci un elemento della lista ">
+                <button>
+                    Aggiungi 
+                </button>
+            </form>
         </div>
         <ul>
             
-            <li v-for="sigleTodo in todoList">
+            <li v-for="(sigleTodo, i) in todoList">
                 {{sigleTodo.text}}
+                <span @click="removeToDo(i)"> 
+                    X
+                </span>
             </li>
         </ul>
     </div>

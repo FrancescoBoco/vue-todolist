@@ -13,3 +13,9 @@
 }
 
 /* GENERAL */
+
+
+ul li span{
+    margin-left: 50px;
+    cursor: pointer;
+}

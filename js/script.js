@@ -20,19 +20,19 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            newTodo: '',
+            newTodo: [],
             todoList: [
                 {
                     text: 'maingiare',
-                    boolean: false,
+                    done: false,
                 },
                 {
                     text: 'bere',
-                    boolean: false,
+                    done: false,
                 },
                 {
                     text: 'respirare',
-                    boolean: false,
+                    done: false,
                 },
             ]
             
@@ -41,9 +41,15 @@ createApp({
     methods: {
         addTodo(){
             if(this.newTodo != ''){
-                this.todoList.push({ text: '',});
+                this.todoList.push({
+                    text: this.newTodo,
+                    done: false,
+                });
                 this.newTodo = '';
             }
+        },
+        removeToDo(index){
+            console.log(index)
         }
     }
 }).mount('#app');
