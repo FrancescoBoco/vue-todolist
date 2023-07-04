@@ -11,32 +11,35 @@
 <body>
 
     <div id="app">
-        <div>
-            <form action="" @submit.prevent="addTodo()">
-                <input required type="text" v-model="newTodo" placeholder="inserisci un elemento della lista ">
-                <button>
-                    Aggiungi 
-                </button>
-            </form>
+        <div class="container">
+            <div class="form-container">
+                <form class="" action="" @submit.prevent="addTodo()">
+                    <input required type="text" v-model="newTodo" placeholder="inserisci una nuova task">
+                    <button>
+                        Aggiungi 
+                    </button>
+                </form>
+            </div>
+    
+            <!-- <ul  v-if="todoList.lenght > 0"> -->
+            <ul >
+    
+                <li v-for="(sigleTodo, i) in todoList"
+                    :class="{
+                        'line-through' : sigleTodo.done == true
+                    }">
+                    {{sigleTodo.text}}
+    
+                    <span @click="removeToDo(i)"> 
+                        X
+                    </span>
+                </li>
+            </ul>
+            <!-- <div v-else>
+                non ci sono ToDO
+            </div> -->
         </div>
-
-        <!-- <ul  v-if="todoList.lenght > 0"> -->
-        <ul >
-
-            <li v-for="(sigleTodo, i) in todoList"
-                :class="{
-                    'line-through' : sigleTodo.done == true
-                }">
-                {{sigleTodo.text}}
-
-                <span @click="removeToDo(i)"> 
-                    X
-                </span>
-            </li>
-        </ul>
-        <!-- <div v-else>
-            non ci sono ToDO
-        </div> -->
+        
     </div>
 
 

@@ -23,15 +23,15 @@ createApp({
             newTodo: [],
             todoList: [
                 {
-                    text: 'maingiare',
+                    text: 'Maingiare',
                     done: true,
                 },
                 {
-                    text: 'bere',
+                    text: 'Bere',
                     done: false,
                 },
                 {
-                    text: 'respirare',
+                    text: 'Respirare',
                     done: true,
                 },
             ]
