@@ -77,9 +77,12 @@ ul li  {
     display: flex;
     justify-content: space-between;
     padding:10px;
+    align-items: center;
+    letter-spacing: .2rem;
 }
 ul li span  {
     border: 2px solid white;
     padding: 5px;
     border-radius: 5px;
+    letter-spacing: 0px;
 }
