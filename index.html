@@ -27,7 +27,8 @@
                 <li v-for="(sigleTodo, i) in todoList"
                     :class="{
                         'line-through' : sigleTodo.done == true
-                    }">
+                    }"
+                    @click="toggleTodo()">
                     {{sigleTodo.text}}
     
                     <span @click="removeToDo(i)"> 

@@ -24,7 +24,7 @@ createApp({
             todoList: [
                 {
                     text: 'Maingiare',
-                    done: true,
+                    done: false,
                 },
                 {
                     text: 'Bere',
@@ -32,7 +32,7 @@ createApp({
                 },
                 {
                     text: 'Respirare',
-                    done: true,
+                    done: false,
                 },
             ]
             
@@ -51,6 +51,10 @@ createApp({
         removeToDo(index){
             console.log(index)
             this.todoList.splice(index, 1)
+        },
+        toggleTodo(index){
+           console.log('hai togglato')
+           this.todoList[index].done = true
         }
     }
 }).mount('#app');
