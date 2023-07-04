@@ -10,21 +10,24 @@
 </head>
 <body>
 
-    <header>
-        HEADER
-    </header>
-
-    <main>
-        <MAIN>
-    </main>
-
-    <footer>
-        FOOTER 
-    </footer>
+    <div id="app">
+        <div>
+            <input type="text" v-model="newTodo" placeholder="inserisci un elemento della lista ">
+            <button @click="addTodo()">
+                Aggiungi 
+            </button>
+        </div>
+        <ul>
+            
+            <li v-for="sigleTodo in todoList">
+                {{sigleTodo.text}}
+            </li>
+        </ul>
+    </div>
 
 
     <!-- SCRIPT  -->
-
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/script.js" link="text/javasript">
 
         
