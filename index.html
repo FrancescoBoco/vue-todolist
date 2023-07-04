@@ -20,8 +20,13 @@
             </form>
         </div>
 
-        <ul  v-if="todoList.lenght > 0">
-            <li v-for="(sigleTodo, i) in todoList">
+        <!-- <ul  v-if="todoList.lenght > 0"> -->
+        <ul >
+
+            <li v-for="(sigleTodo, i) in todoList"
+                :class="{
+                    'line-through' : sigleTodo.done == true
+                }">
                 {{sigleTodo.text}}
 
                 <span @click="removeToDo(i)"> 
@@ -29,9 +34,9 @@
                 </span>
             </li>
         </ul>
-        <div v-else>
+        <!-- <div v-else>
             non ci sono ToDO
-        </div>
+        </div> -->
     </div>
 
 

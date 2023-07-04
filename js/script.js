@@ -24,7 +24,7 @@ createApp({
             todoList: [
                 {
                     text: 'maingiare',
-                    done: false,
+                    done: true,
                 },
                 {
                     text: 'bere',
@@ -32,7 +32,7 @@ createApp({
                 },
                 {
                     text: 'respirare',
-                    done: false,
+                    done: true,
                 },
             ]
             

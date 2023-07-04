@@ -19,3 +19,7 @@ ul li span{
     margin-left: 50px;
     cursor: pointer;
 }
+
+.line-through{
+    text-decoration: line-through;
+}
