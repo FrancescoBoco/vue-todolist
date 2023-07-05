@@ -28,7 +28,9 @@
                     :class="{
                         'line-through' : sigleTodo.done == true
                     }"
-                    @click="toggleTodo()">
+                    @click="toggleTodo(i)"
+                    @change="sigleTodo.done != sigleTodo.done">
+                    
                     {{sigleTodo.text}}
     
                     <span @click="removeToDo(i)"> 

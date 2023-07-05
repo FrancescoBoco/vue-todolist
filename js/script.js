@@ -31,8 +31,8 @@ createApp({
                     done: false,
                 },
                 {
-                    text: 'Respirare',
-                    done: false,
+                    text: 'Dormire',
+                    done: true,
                 },
             ]
             
@@ -53,8 +53,10 @@ createApp({
             this.todoList.splice(index, 1)
         },
         toggleTodo(index){
-           console.log('hai togglato')
-           this.todoList[index].done = true
+           console.log('hai togglato', index)
+           this.todoList[index].done = !this.todoList[index].done
+
+
         }
     }
 }).mount('#app');
